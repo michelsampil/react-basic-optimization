@@ -3,7 +3,7 @@ import "./App.css";
 import { useEffect, useMemo, useCallback } from "react";
 
 // Components
-import List, { Todo } from "./components/List";
+import List from "./components/List";
 
 const initialTodos = [
   { id: 1, task: "Go shopping" },
