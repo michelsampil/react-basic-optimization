@@ -41,9 +41,6 @@ function App() {
     setTerm(task);
   };
 
-  // filter is a exprensive operation because it need to check all the list
-  // elements, so in order to get the filtered TODOS we can "save" the
-  // function in memory and update it only when todoList is modified 👇
   const handleDelete = useCallback(
     (taskId) => {
       const newTodoList = todoList.filter((todo) => todo.id !== taskId);
