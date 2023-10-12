@@ -14,6 +14,17 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
