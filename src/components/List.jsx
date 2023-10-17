@@ -1,7 +1,5 @@
-// Dependencies
 import { useEffect, memo } from "react";
 import PropTypes from "prop-types";
-// Components
 import Task from "./Task";
 
 const List = ({ todoList, handleDelete }) => {
