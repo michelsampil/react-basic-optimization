@@ -41,6 +41,13 @@ function App() {
     setTerm(task);
   };
 
+  // handleDelete is a function that will be re-created each time
+  // the component will be re-rendered and is passing through
+  // props to the child (List) so even thought the function
+  // looks the same, it's another function, so the child (List)
+  // will be re-render even if it's memorized. in order to fix that
+  // we can use useCallback 👇 to memoize handleDelete and re-calculate it
+  // only if todoList changes
   const handleDelete = useCallback(
     (taskId) => {
       const newTodoList = todoList.filter((todo) => todo.id !== taskId);
@@ -51,7 +58,7 @@ function App() {
 
   // filter is a expensive operation because it need to check all the list
   // elements, so in order to get the filtered TODOS we can "save" the
-  // function in memory and update it only when todoList is modified 👇
+  // function in memory 👇 and update it only when todoList or term is modified
   const filteredTodoList = useMemo(
     () =>
       todoList.filter((todo) => {

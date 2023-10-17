@@ -24,3 +24,7 @@ Task.propTypes = {
 // and prevent it to being unnecessary re-render using the
 // HOC function memo 👇
 export default memo(Task);
+
+// if we don't memoize the component we will see that each element
+// is re-rendered when a new one is added to the list
+// export default Task;
