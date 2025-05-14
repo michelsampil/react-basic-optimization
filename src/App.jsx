@@ -69,26 +69,21 @@ function App() {
   );
 
   return (
-    <>
-      <div className="card">
-        <div>
-          <div className="box">
-            <h2>TASKS</h2>
-            <input
-              type="text"
-              value={task}
-              onChange={(e) => setTask(e.target.value)}
-            />
-            <div className="buttonGroup">
-              <button onClick={handleCreate}>Create</button>
-              <button onClick={handleSearch}>Search</button>
-            </div>
-          </div>
-
-          <List todoList={filteredTodoList} handleDelete={handleDelete} />
+    <div className="card">
+      <div className="box">
+        <h2>TASKS</h2>
+        <input
+          type="text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+        />
+        <div className="buttonGroup">
+          <button onClick={handleCreate}>Create</button>
+          <button onClick={handleSearch}>Search</button>
         </div>
+        <List todoList={filteredTodoList} handleDelete={handleDelete} />
       </div>
-    </>
+    </div>
   );
 }
 
